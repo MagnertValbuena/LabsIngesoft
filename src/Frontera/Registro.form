@@ -19,15 +19,20 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="nombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="contrasena" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="validarContrasena" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="nombreTF" pref="135" max="32767" attributes="0"/>
-                  <Component id="contrasenaTF" max="32767" attributes="0"/>
-                  <Component id="validarContrasenaTF" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="contrasena" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="validarContrasena" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="nombreTF" pref="135" max="32767" attributes="0"/>
+                          <Component id="contrasenaTF" max="32767" attributes="0"/>
+                          <Component id="validarContrasenaTF" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="aceptarB" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="136" max="32767" attributes="0"/>
           </Group>
@@ -51,7 +56,9 @@
                   <Component id="validarContrasena" min="-2" max="-2" attributes="0"/>
                   <Component id="validarContrasenaTF" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="211" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="aceptarB" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="170" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,6 +84,14 @@
     <Component class="javax.swing.JTextField" name="contrasenaTF">
     </Component>
     <Component class="javax.swing.JTextField" name="validarContrasenaTF">
+    </Component>
+    <Component class="javax.swing.JButton" name="aceptarB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aceptar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aceptarBActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
