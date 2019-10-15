@@ -1,21 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Control;
-
-import Entidad.Sistema;
+import DAO.UsuarioDAO;
+//import Entidad.Sistema;
 import Entidad.Usuario;
-import Frontera.FramePrincipal;
+//import Frontera.FramePrincipal;
 
 /**
  *
  * @author Magnert
  */
 public class ValidarLogin {
-    private Sistema sistema = FramePrincipal.sistema;
-
+    //private Sistema sistema = FramePrincipal.sistema;
+    private UsuarioDAO dao = new UsuarioDAO();
     public ValidarLogin() {
     }
     public String verificarLogin(Usuario usuario){
@@ -25,10 +20,13 @@ public class ValidarLogin {
         if(!verificarLongitudPassword(usuario.getPassword())){
             return("Longitud Password Incorrecta");
         }
-        for(Usuario u: sistema.getUsuarios()){
+        /*for(Usuario u: sistema.getUsuarios()){
             if(u.getNombre().equals(usuario.getNombre()) && u.getPassword().equals(usuario.getPassword())){
                 return("Bienvenido");
             }
+        }*/
+        if(dao.leer(usuario)!=null){
+            return("Bienvenido");
         }
         return("Datos Incorrectos");
     }
